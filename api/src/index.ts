@@ -5,7 +5,6 @@ import { TechnologyResolver } from './resolvers/technology.resolver';
 import { buildSchema } from 'type-graphql';
 import { ApolloServerContext } from './contexts/apollo-server.context';
 import { PrismaClient } from '@prisma/client';
-import { GraphQLDateTime } from 'graphql-scalars';
 
 const prisma = new PrismaClient();
 
@@ -19,7 +18,7 @@ const server = new ApolloServer<ApolloServerContext>({
 });
 
 const { url } = await startStandaloneServer<ApolloServerContext>(server, {
-    listen: { port: 4201 },
+    listen: { port: Number(process.env.API_PORT) || 4222 },
     context: async () => {
         return {
             prisma,
