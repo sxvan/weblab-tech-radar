@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id @default(uuid())
+  name         String
+  email        String @unique
+  passwordHash String
+  role         Role   @default(EMPLOYEE)
+}
+
+model Technology {
+  id                        String         @id @default(uuid())
+  name                      String
+  description               String
+  category                  Category
+  classification            Classification
+  classificationDescription String
+  createdAt                 DateTime
+  publishedAt               DateTime?
+  changedAt                 DateTime
+}
+
+enum Role {
+  CTO
+  TECH_LEAD
+  EMPLOYEE
+}
+
+enum Category {
+  TECHNIQUES
+  PLATFORMS
+  TOOLS
+  LANGUAGES_AND_FRAMEWORKS
+}
+
+enum Classification {
+  ASSESS
+  TRIAL
+  ADOPT
+  HOLD
+}
