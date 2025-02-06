@@ -12,7 +12,7 @@ build({
 }).catch(() => process.exit(1));
 
 build({
-    entryPoints: ['./prisma/seed.ts'], // Entry point (your TypeScript file)
+    entryPoints: ['./src/seed.ts'], // Entry point (your TypeScript file)
     bundle: true, // Bundle all your modules
     outfile: './dist/seed.js', // Output file for the bundled JavaScript
     platform: 'node', // Target environment is Node.js
