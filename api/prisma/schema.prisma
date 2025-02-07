@@ -20,11 +20,11 @@ model Technology {
   name                      String
   description               String
   category                  Category
-  classification            Classification
-  classificationDescription String
+  classification            Classification?
+  classificationDescription String?
   createdAt                 DateTime
   publishedAt               DateTime?
-  changedAt                 DateTime
+  changedAt                 DateTime?
 }
 
 enum Role {

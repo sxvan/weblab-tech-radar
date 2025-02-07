@@ -21,17 +21,17 @@ export class Technology {
     category!: Category;
 
     @Field(() => Classification)
-    classification!: Classification;
+    classification?: Classification | null;
 
     @Field(() => String)
-    classificationDescription!: string;
+    classificationDescription?: string | null;
 
     @Field(() => GraphQLDateTime)
     createdAt!: Date;
 
     @Field(() => GraphQLDateTime)
-    publishedAt!: Date | null;
+    publishedAt?: Date | null;
 
     @Field(() => GraphQLDateTime)
-    changedAt!: Date;
+    changedAt?: Date | null;
 }
