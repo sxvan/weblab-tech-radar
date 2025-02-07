@@ -12,9 +12,9 @@ export class CreateTechnologyInput {
     @Field(() => Category)
     category!: Category;
 
-    @Field(() => Classification)
-    classification!: Classification;
+    @Field(() => Classification, { nullable: true })
+    classification?: Classification;
 
-    @Field(() => String)
-    classificationDescription!: string;
+    @Field(() => String, { nullable: true })
+    classificationDescription?: string;
 }

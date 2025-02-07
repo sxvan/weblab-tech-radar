@@ -3,18 +3,18 @@ import { Field, InputType } from 'type-graphql';
 
 @InputType()
 export class UpdateTechnologyInput {
-    @Field(() => String)
+    @Field(() => String, { nullable: true })
     name?: string;
 
-    @Field(() => String)
+    @Field(() => String, { nullable: true })
     description?: string;
 
-    @Field(() => Category)
+    @Field(() => Category, { nullable: true })
     category?: Category;
 
-    @Field(() => Classification)
+    @Field(() => Classification, { nullable: true })
     classification?: Classification;
 
-    @Field(() => String)
+    @Field(() => String, { nullable: true })
     classificationDescription?: string;
 }

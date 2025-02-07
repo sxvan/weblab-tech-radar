@@ -26,7 +26,6 @@ export class TechnologyResolver {
             data: {
                 ...data,
                 createdAt: new Date(),
-                changedAt: new Date(),
             },
         });
     }

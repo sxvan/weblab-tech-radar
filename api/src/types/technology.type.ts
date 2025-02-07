@@ -20,18 +20,18 @@ export class Technology {
     @Field(() => Category)
     category!: Category;
 
-    @Field(() => Classification)
-    classification?: Classification | null;
+    @Field(() => Classification, { nullable: true })
+    classification!: Classification | null;
 
-    @Field(() => String)
-    classificationDescription?: string | null;
+    @Field(() => String, { nullable: true })
+    classificationDescription!: string | null;
 
     @Field(() => GraphQLDateTime)
     createdAt!: Date;
 
-    @Field(() => GraphQLDateTime)
-    publishedAt?: Date | null;
+    @Field(() => GraphQLDateTime, { nullable: true })
+    publishedAt!: Date | null;
 
-    @Field(() => GraphQLDateTime)
-    changedAt?: Date | null;
+    @Field(() => GraphQLDateTime, { nullable: true })
+    changedAt!: Date | null;
 }
