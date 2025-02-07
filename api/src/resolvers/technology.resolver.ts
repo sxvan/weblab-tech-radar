@@ -7,8 +7,10 @@ import { UpdateTechnologyInput } from '../inputs/update-technology.input';
 
 export class TechnologyResolver {
     @Query(() => [Technology])
-    async technologies(@Ctx() ctx: ApolloServerContext): Promise<Technology[]> {
-        return ctx.prisma.technology.findMany();
+    async technologies(@Ctx() ctx: ApolloServerContext, @Arg('onlyPublished', () => Boolean, { nullable: true }) onlyPublished?: boolean): Promise<Technology[]> {
+        return ctx.prisma.technology.findMany({
+            where: onlyPublished ? { publishedAt: { not: null } } : {},
+        });
     }
 
     @Query(() => Technology)
