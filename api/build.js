@@ -8,7 +8,7 @@ build({
     target: 'node16', // Set the target JavaScript version
     format: 'esm',
     sourcemap: true, // Optional: Generate source maps for debugging
-    external: ['@prisma/client', '@apollo/server', 'graphql', 'graphql-scalars', 'reflect-metadata', 'type-graphql'], // Optional: Exclude specific modules from being bundled (like Prisma)
+    external: ['@prisma/client', '@apollo/server', 'graphql', 'graphql-scalars', 'reflect-metadata', 'type-graphql', 'jsonwebtoken', 'bcryptjs'], // Optional: Exclude specific modules from being bundled (like Prisma)
 }).catch(() => process.exit(1));
 
 build({
@@ -19,5 +19,5 @@ build({
     target: 'node16', // Set the target JavaScript version
     format: 'esm',
     sourcemap: true, // Optional: Generate source maps for debugging
-    external: ['@prisma/client', '@apollo/server', 'graphql', 'graphql-scalars', 'reflect-metadata', 'type-graphql'], // Optional: Exclude specific modules from being bundled (like Prisma)
+    external: ['@prisma/client', '@apollo/server', 'graphql', 'graphql-scalars', 'reflect-metadata', 'type-graphql', 'jsonwebtoken', 'bcryptjs'], // Optional: Exclude specific modules from being bundled (like Prisma)
 }).catch(() => process.exit(1));

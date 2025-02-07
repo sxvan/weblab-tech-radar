@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { Technology } from '../src/types/technology.type';
+import { User } from './types/user.type';
+import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
 
@@ -17,7 +19,25 @@ async function main() {
     };
 
     await prisma.technology.create({
-        data: { ...technology1 },
+        data: technology1,
+    });
+
+    const adminUser: Omit<User, 'id'> = {
+        email: 'admin.admin@gmail.com',
+        name: 'Admin Admin',
+        passwordHash: await bcrypt.hash('admin', 10),
+        role: 'CTO',
+    };
+
+    const user: Omit<User, 'id'> = {
+        email: 'user.user@gmail.com',
+        name: 'User User',
+        passwordHash: await bcrypt.hash('user', 10),
+        role: 'EMPLOYEE',
+    };
+
+    await prisma.user.createMany({
+        data: [user, adminUser],
     });
 }
 
