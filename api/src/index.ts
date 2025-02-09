@@ -7,8 +7,6 @@ import { ApolloServerContext } from './contexts/apollo-server.context';
 import { PrismaClient } from '@prisma/client';
 import { UserResolver } from './resolvers/user.resolver';
 
-import { Buffer } from 'buffer';
-
 const prisma = new PrismaClient();
 
 const schema = await buildSchema({
