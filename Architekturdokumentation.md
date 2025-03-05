@@ -116,6 +116,30 @@ Es wird JWT (JSON Web Token) zur Authentifizierung verwendet. Der Benutzer sende
 
 8. **Trennung von Frontend und Backend**: Bessere Wartbarkeit und Skalierbarkeit durch klare Trennung, unabhängige Änderungen.
 
+## Qualitätsanforderungen
+
+1. **Leistung**  
+   Das System sollte eine bestimmte Anzahl gleichzeitiger Nutzer und Anfragen pro Sekunde ohne signifikante Verschlechterung der Antwortzeiten bewältigen können. Leistung ist zwar wichtig, jedoch kann eine gewisse Leistungseinbuße bei geringer Nutzung toleriert werden.
+
+2. **Skalierbarkeit**  
+   Die Architektur sollte zukünftiges Wachstum unterstützen, insbesondere mit zunehmender Nutzerzahl oder der Integration weiterer Technologien. Die Wahl von Docker für PostgreSQL sorgt dafür, dass die Datenbankumgebung zukünftig problemlos skaliert werden kann.
+
+3. **Sicherheit**  
+   Sicherheit ist besonders wichtig für Benutzerdaten und den Authentifizierungsprozess. Während JWT-Token für sichere Authentifizierung und Autorisierung genutzt werden, sind weitere Sicherheitsmaßnahmen wie Verschlüsselung der Daten im Ruhezustand und gesicherte API-Endpunkte wünschenswert, aber aufgrund der begrenzten Zeit nicht priorisiert worden.
+
+4. **Wartbarkeit**  
+   Das System sollte einfach wartbar und erweiterbar sein. Der Einsatz von TypeGraphQL, Apollo Server und Prisma trägt dazu bei, dass der Code sauber, wiederverwendbar und konsistent bleibt, was zukünftige Anpassungen erleichtert.
+
+### Testing
+
+Aufgrund schlechter Zeitplanung wurden im Rahmen dieses Projekts keine Tests durchgeführt. Das Fehlen formaler Tests bedeutet, dass das System nicht auf mögliche Edgecases geprüft wurde. Daher ist die Zuverlässigkeit und Leistung des Systems unter verschiedenen Bedingungen nicht vollständig gewährleistet. Zukünftige Arbeiten sollten umfassende automatisierte Tests umfassen, um diese Risiken zu mindern und eine höhere Systemrobustheit sicherzustellen.
+
+
+
+
+
+
+
 
 
 
