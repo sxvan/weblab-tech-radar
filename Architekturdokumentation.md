@@ -73,7 +73,7 @@ In diesem Beispiel wird die Laufzeitsicht zur Erstellung einer neuen Technologie
 
 ## Verteilungssicht
 
-Das System wird in drei Hauptkomponenten unterteilt (Frontend, Backend und Datenbank), wobei nur die Datenbank mit Docker bereitgestellt wird. Wichtige Konfigurationswerte werden über eine .env-Datei zur Verfügung gestellt, die bei Bedarf angepasst werden kann. Die Anwendung läuft nicht in einer produktiven Umgebung. Eine Testumgebung wurde ebenfalls nicht aufgesetzt. In der Zukünftigen könnten die Applikation mit Hilfe von GitHub Actions verteilt werden.
+Das System wird in drei Hauptkomponenten unterteilt (Frontend, Backend und Datenbank), wobei nur die Datenbank mit Docker bereitgestellt wird. Wichtige Konfigurationswerte werden über eine .env-Datei zur Verfügung gestellt, die bei Bedarf angepasst werden kann. Die Anwendung läuft nicht in einer produktiven Umgebung. Eine Testumgebung wurde ebenfalls nicht aufgesetzt. In der Zukünft könnten die Applikation mit Hilfe von GitHub Actions verteilt werden.
 
 ![image](https://github.com/user-attachments/assets/24fc2566-9c5a-4010-91d7-db7e777f6cab)
 
