@@ -12,5 +12,7 @@ Leider führte der Motivationsverlust nach der Fertigstellung des Backends dazu,
 Das hat nicht nur die Zeitplanung des Projekts durcheinandergebracht, sondern auch dazu geführt, dass ich Tests und viele andere Aspekte des Frontends vernachlässigte. Insbesondere habe ich bei der Benutzerfreundlichkeit, Fehlerbehandlung und Validierung im Frontend Abstriche gemacht, was sich im Nachhinein nicht gut anfühlt. 
 Diese Verzögerungen und das Aufschieben der Entwicklung haben den gesamten Projektverlauf beeinflusst und wären vermeidbar gewesen, wenn ich frühzeitig mehr Fokus auf das Frontend und die damit verbundenen Qualitätsaspekte gelegt hätte.
 
+Ein weiteres wichtiges Learning, dass ich während des Projekts hatte ist das ich öfters comitten sollte - auch wenn ich alleine arbeite. Dieser Fehler hat zu Arbeitsverlust geführt. Des weiteren habe ich das Arbeitsjournal nicht sehr präsize geführt und durch die ungenauen commits ist es schwierig die exakten Arbeitsschritte nachzubilden.
+
 Insgesamt war das Projekt eine wertvolle Lerngelegenheit, aber es gibt auch viele Punkte, an denen ich mich verbessern muss. 
 Das Projekt hat mir gezeigt, wie wichtig es ist, Zeit für alle Teile eines Systems einzuplanen, insbesondere für Tests und das Frontend, und dass eine gute Planung und ein frühzeitiger Fokus auf alle Komponenten entscheidend für den Erfolg eines Projekts sind.
