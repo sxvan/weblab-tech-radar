@@ -1,0 +1,110 @@
+<form
+  [formGroup]="createTechnologyForm"
+  (ngSubmit)="createTechnology()"
+  class="container mt-4"
+>
+  <h2 class="text-center mb-4">Create Technology</h2>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name:</label>
+    <input id="name" formControlName="name" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description:</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      class="form-control"
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <select id="category" formControlName="category" class="form-select">
+      <option *ngFor="let category of categories" [value]="category">
+        {{ category }}
+      </option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="classification" class="form-label">Classification:</label>
+    <select
+      id="classification"
+      formControlName="classification"
+      class="form-select"
+    >
+      <option
+        *ngFor="let classification of classifications"
+        [value]="classification"
+      >
+        {{ classification }}
+      </option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="classificationDescription" class="form-label"
+      >Classification Description:</label
+    >
+    <textarea
+      id="classificationDescription"
+      formControlName="classificationDescription"
+      class="form-control"
+    ></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-primary">Create Technology</button>
+  </div>
+</form>
+
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Technologies</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Classification</th>
+          <th>Classification Description</th>
+          <th>Published</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="technologies$ | async as technologies">
+        <tr *ngFor="let tech of technologies">
+          <td>{{ tech.createdAt }}</td>
+          <td>{{ tech.name }}</td>
+          <td>{{ tech.description }}</td>
+          <td>{{ tech.category }}</td>
+          <td>{{ tech.classification }}</td>
+          <td>{{ tech.classificationDescription }}</td>
+          <td>
+            <span class="badge bg-success" *ngIf="tech.publishedAt">Yes</span>
+            <span class="badge bg-danger" *ngIf="!tech.publishedAt">No</span>
+          </td>
+          <td>
+            <button
+              *ngIf="!tech.publishedAt"
+              (click)="publishTechnology(tech.id)"
+              class="btn btn-sm btn-success"
+            >
+              Publish Now
+            </button>
+            <button
+              (click)="editTechnology(tech.id)"
+              class="btn btn-sm btn-primary"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

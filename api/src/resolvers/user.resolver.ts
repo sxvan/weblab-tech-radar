@@ -21,6 +21,6 @@ export class UserResolver {
             throw new GraphQLError('Wrong password');
         }
 
-        return jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '2d' });
+        return jwt.sign({ userId: user.id, role: user.role }, JWT_SECRET, { expiresIn: '2d' });
     }
 }

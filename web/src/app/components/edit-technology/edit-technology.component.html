@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Update Technology</h2>
+  <form
+    [formGroup]="updateTechnologyForm"
+    (ngSubmit)="updateTechnology()"
+    class="p-4 border rounded shadow bg-light"
+  >
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input id="name" formControlName="name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        class="form-control"
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="category" class="form-label">Category:</label>
+      <select id="category" formControlName="category" class="form-select">
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+  </form>
+</div>

@@ -4,6 +4,7 @@ import {
   inject,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { setContext } from '@apollo/client/link/context';
 
 import { routes } from './app.routes';
 import {
@@ -24,10 +25,23 @@ export const appConfig: ApplicationConfig = {
     provideApollo(() => {
       const httpLink = inject(HttpLink);
 
+      const authLink = setContext((_, { headers }) => {
+        const token = localStorage.getItem('token');
+
+        return {
+          headers: {
+            ...headers,
+            Authorization: token ? `Bearer ${token}` : '',
+          },
+        };
+      });
+
       return {
-        link: httpLink.create({
-          uri: '<%= endpoint %>',
-        }),
+        link: authLink.concat(
+          httpLink.create({
+            uri: 'http://localhost:4222',
+          })
+        ),
         cache: new InMemoryCache(),
       };
     }),
