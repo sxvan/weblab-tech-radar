@@ -11,6 +11,7 @@ Das Frontend ist eine Single-Page Angular-Anwendung, die über Apollo Angular mi
   - Backend: Node.js mit Apollo Server und Prisma (für die Datenbankgenerierung).
   - Datenbank: PostgreSQL, betrieben in Docker, für Isolation und einfache Umgebungseinrichtung.
   - Frontend: Angular mit Apollo Angular für die GraphQL-Kommunikation im Frontend.
+  - Schnittstelle: Es wurde sich für eine GraphQL Schnittstelle entschieden. Diese Entscheidung basiert auf dem Lerneffekt und ist nicht speziell für dieses Projekt geeignet.
   
 - Architektur: Das System folgt einem Code-First-Ansatz (mit Prisma), bei dem das Datenbankschema basierend auf dem Backend-Code generiert wird, um Konsistenz und Wartbarkeit zu gewährleisten.
   
