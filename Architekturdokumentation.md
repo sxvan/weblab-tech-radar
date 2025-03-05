@@ -47,3 +47,7 @@ Diese Entscheidungen zielen darauf ab, ein flexibles, skalierbares und wartbares
 Die Struktur des Systems wurde so gewählt, dass sie eine klare Trennung zwischen Frontend und Backend ermöglicht, was eine saubere Skalierbarkeit und Wartbarkeit sicherstellt. Mit Prisma als ORM können Änderungen an der Datenbankstruktur problemlos vorgenommen werden, ohne dass eine separate SQL-Abstraktionsschicht erforderlich ist. Type-GraphQL und Apollo-Server ermöglichen eine saubere und erweiterbare GraphQL-API, die die Kommunikation zwischen Frontend und Backend effizient gestaltet.
 
 Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste und skalierbare Datenbanklösung, die leicht zu konfigurieren und zu verwalten ist.
+
+### Gesamtübersicht
+![image](https://github.com/user-attachments/assets/74ee34fa-0a5c-4d9f-ba88-96370b07a3e0)
+
