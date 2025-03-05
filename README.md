@@ -10,7 +10,7 @@
 
 - edit .env (.env.example for guidance)
 
-- `docker-compose up -d`
+- `docker-compose up -d` (requires docker to be installed)
 
 - `npx prisma migrate deploy`
 
