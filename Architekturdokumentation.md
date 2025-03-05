@@ -24,8 +24,6 @@ Diese Entscheidungen zielen darauf ab, ein flexibles, skalierbares und wartbares
 
 ## Systembausteine
 
-In diesem Abschnitt wird die statische Dekonstruktion des Systems in einzelne Bausteine beschrieben. Dies umfasst die Module, Komponenten und ihre jeweiligen Beziehungen sowie Abhängigkeiten. Für dein System könnte das folgende Bausteine umfassen:
-
 ### Backend (Node.js API)
 - GraphQL API: Die Hauptschnittstelle für die Kommunikation zwischen Frontend und Backend.
   - Apollo-Server: Dient als GraphQL-Server, der die Anfragen vom Frontend verarbeitet und Antworten zurückgibt.
