@@ -65,5 +65,12 @@ Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste un
 
 **Database → Docker Container**: Postgres läuft innerhalb eines Docker-Containers für eine isolierte Umgebung.
 
+## Laufzeitsicht
+
+In diesem Beispiel wird die Laufzeitsicht zur Erstellung einer neuen Technologie abgebildet. Dieser Ablauf wiederspiegelt die Abwicklung der meisten Use Cases.
+
+![image](https://github.com/user-attachments/assets/066236fc-0a71-46c9-bc72-9257cd3de25b)
+
+
 
 
