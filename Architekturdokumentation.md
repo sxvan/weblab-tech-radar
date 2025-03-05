@@ -94,6 +94,10 @@ Das Domänenmodell repräsentiert die grundlegenden Entitäten und deren Beziehu
 - Eine **Technology** gehört zu einer **Category**.
 - Eine **Technology** kann optional einer **Classification** zugewiesen werden.
 
+### Autentifizerung und Authorisierung
+
+Es wird JWT (JSON Web Token) zur Authentifizierung verwendet. Der Benutzer sendet eine Anfrage an die GraphQL-API, um sich anzumelden. Bei erfolgreicher Authentifizierung erhält der Benutzer ein JWT, das dann in den Headern zukünftiger GraphQL-Anfragen zur Identifikation und Autorisierung verwendet wird. Das Token wird bei jeder Anfrage überprüft, um sicherzustellen, dass der Benutzer über die erforderlichen Berechtigungen verfügt. Das JWT-Token ist zwei Tage gültig.
+
 
 
 
