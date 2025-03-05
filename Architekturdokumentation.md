@@ -51,4 +51,26 @@ Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste un
 ### Gesamtübersicht
 ![image](https://github.com/user-attachments/assets/c52f07ed-5c28-4090-bcbd-a2d1c3af2c92)
 
+#### Backend
+Das Backend nutzt ApolloServer für GraphQL und Prisma als ORM, um mit der Datenbank zu interagieren.
+
+#### Frontend
+Das Frontend verwendet Angular für die Benutzeroberfläche und ApolloAngular für die GraphQL-Kommunikation.
+
+#### Database
+Postgres speichert die Daten und wird über Prisma im Backend angesprochen.
+
+#### Backend → Frontend
+Das Backend sendet GraphQL-Antworten mit den angeforderten Daten an das Frontend.
+
+#### Frontend → Backend
+Das Frontend sendet GraphQL-Anfragen an das Backend, um Daten abzurufen oder zu verändern.
+
+#### Backend → Database
+Prisma ermöglicht dem Backend die Interaktion mit der Postgres-Datenbank.
+
+#### Database → Docker Container
+Postgres läuft innerhalb eines Docker-Containers für eine isolierte Umgebung.
+
+
 
