@@ -98,6 +98,25 @@ Das Domänenmodell repräsentiert die grundlegenden Entitäten und deren Beziehu
 
 Es wird JWT (JSON Web Token) zur Authentifizierung verwendet. Der Benutzer sendet eine Anfrage an die GraphQL-API, um sich anzumelden. Bei erfolgreicher Authentifizierung erhält der Benutzer ein JWT, das dann in den Headern zukünftiger GraphQL-Anfragen zur Identifikation und Autorisierung verwendet wird. Das Token wird bei jeder Anfrage überprüft, um sicherzustellen, dass der Benutzer über die erforderlichen Berechtigungen verfügt. Das JWT-Token ist zwei Tage gültig.
 
+## Architekturentscheidungen:
+
+1. **Backend: Node.js mit Apollo Server**: Hohe Performance und Flexibilität durch Node.js, effiziente GraphQL-Verarbeitung mit Apollo Server.
+
+2. **PostgreSQL in Docker**: Robuste relationale Datenbank, isolierte und einfach konfigurierbare Umgebung durch Docker, einfache Skalierbarkeit.
+
+3. **Frontend: Angular mit Apollo Angular**: Angular für strukturierte SPAs, Apollo Angular für nahtlose GraphQL-Integration im Frontend.
+
+4. **GraphQL als Schnittstelle**: Flexible und präzise Datenabfragen, reduzierte Datenlast und verbesserte Performance.
+
+5. **JWT für Authentifizierung**: Sichere, effiziente Authentifizierung mit JWT, einfaches Handling von Benutzerberechtigungen.
+
+6. **Code-First-Ansatz mit Prisma und Type-GraphQL**: Enge Verbindung zwischen Code und Datenbank, erhöhte Konsistenz und Wartbarkeit, Typensicherheit (DRY).
+
+7. **Docker für Datenbank**: Isolierte, reproduzierbare Umgebung für die PostgreSQL-Datenbank, erleichtert Verwaltung und Skalierung.
+
+8. **Trennung von Frontend und Backend**: Bessere Wartbarkeit und Skalierbarkeit durch klare Trennung, unabhängige Änderungen.
+
+
 
 
 
