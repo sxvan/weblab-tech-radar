@@ -1,8 +1,9 @@
 import { Category, Classification } from '@prisma/client';
 import { Field, InputType } from 'type-graphql';
+import { UpdateTechnologyInput } from 'shared/types/update-technology.type';
 
 @InputType()
-export class UpdateTechnologyInput {
+export class UpdateTechnologyInputWithDecorators implements UpdateTechnologyInput {
     @Field(() => String, { nullable: true })
     name?: string;
 

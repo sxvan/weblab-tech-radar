@@ -1,0 +1,1 @@
+export type Category = 'TECHNIQUES' | 'PLATFORMS' | 'TOOLS' | 'LANGUAGES_AND_FRAMEWORKS';

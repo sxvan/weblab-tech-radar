@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import { Arg, Ctx, ID, Mutation, Query, Resolver, UseMiddleware } from 'type-graphql';
 import { Technology } from '../types/technology.type';
 import { ApolloServerContext } from '../contexts/apollo-server.context';
-import { CreateTechnologyInput } from '../inputs/create-technology.input';
-import { UpdateTechnologyInput } from '../inputs/update-technology.input';
+import { CreateTechnologyInputWithDecorators as CreateTechnologyInput } from '../inputs/create-technology.input';
+import { UpdateTechnologyInputWithDecorators as UpdateTechnologyInput } from '../inputs/update-technology.input';
 import { isAuthenticated } from '../middlewares/jwt.middleware';
 
 @Resolver()

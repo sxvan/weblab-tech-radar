@@ -1,5 +1,5 @@
 import { Arg, Ctx, Mutation, Resolver } from 'type-graphql';
-import { LoginInput } from '../inputs/login.input';
+import { LoginInputWithDecorators as LoginInput } from '../inputs/login.input';
 import { ApolloServerContext } from '../contexts/apollo-server.context';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';

@@ -1,7 +1,8 @@
-import { Field, InputType, ObjectType } from 'type-graphql';
+import { Field, InputType } from 'type-graphql';
+import { LoginInput } from 'shared/types/login.type';
 
 @InputType()
-export class LoginInput {
+export class LoginInputWithDecorators implements LoginInput {
     @Field(() => String)
     email!: string;
 
