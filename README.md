@@ -24,3 +24,12 @@
 
 - `ng serve`
 
+## default login data
+
+employee:
+- email: user.user@gmail.com
+- password: user
+
+CTO:
+- email: admin.admin@gmail.com
+- password: admin
