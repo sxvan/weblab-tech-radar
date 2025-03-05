@@ -49,5 +49,6 @@ Die Struktur des Systems wurde so gewählt, dass sie eine klare Trennung zwische
 Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste und skalierbare Datenbanklösung, die leicht zu konfigurieren und zu verwalten ist.
 
 ### Gesamtübersicht
-![image](https://github.com/user-attachments/assets/74ee34fa-0a5c-4d9f-ba88-96370b07a3e0)
+![image](https://github.com/user-attachments/assets/c52f07ed-5c28-4090-bcbd-a2d1c3af2c92)
+
 
