@@ -38,7 +38,7 @@ Diese Entscheidungen zielen darauf ab, ein flexibles, skalierbares und wartbares
   - Components: Komponenten, die die Benutzeroberfläche darstellen (z.B. Formular für das Erstellen von Technologien, Ansicht von Technologien).
   - Services: Für die Kommunikation mit der GraphQL-API und die Verwaltung von Daten im Frontend.
 
-### Datenbank
+### Datenbank (Postgres)
 - PostgreSQL-Datenbank: Hier werden alle Daten zur Verwaltung von Technologien, Benutzerrollen und anderen relevanten Informationen gespeichert.
 - Docker-Container: Der PostgreSQL-Datenbankserver läuft in einem Docker-Container, um eine isolierte, leicht wiederherstellbare Umgebung bereitzustellen.
 
@@ -70,6 +70,12 @@ Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste un
 In diesem Beispiel wird die Laufzeitsicht zur Erstellung einer neuen Technologie abgebildet. Dieser Ablauf wiederspiegelt die Abwicklung der meisten Use Cases.
 
 ![image](https://github.com/user-attachments/assets/066236fc-0a71-46c9-bc72-9257cd3de25b)
+
+## Verteilungssicht
+
+Das System wird in drei Hauptkomponenten unterteilt (Frontend, Backend und Datenbank), wobei nur die Datenbank mit Docker bereitgestellt wird. Wichtige Konfigurationswerte werden über eine .env-Datei zur Verfügung gestellt, die bei Bedarf angepasst werden kann. Die Anwendung läuft nicht in einer produktiven Umgebung. Eine Testumgebung wurde ebenfalls nicht aufgesetzt. In der Zukünftigen könnten die Applikation mit Hilfe von GitHub Actions verteilt werden.
+
+![image](https://github.com/user-attachments/assets/24fc2566-9c5a-4010-91d7-db7e777f6cab)
 
 
 
