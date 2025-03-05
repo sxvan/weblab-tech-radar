@@ -56,6 +56,7 @@ Die Entscheidung, PostgreSQL und Docker zu verwenden, sorgt für eine robuste un
 **Frontend**: Das Frontend verwendet Angular für die Benutzeroberfläche und ApolloAngular für die GraphQL-Kommunikation.
 
 **Database**: Postgres speichert die Daten und wird über Prisma im Backend angesprochen.
+
 **Frontend → Backend**: Das Frontend sendet GraphQL-Anfragen an das Backend, um Daten abzurufen oder zu verändern.
 
 **Backend → Frontend**: Das Backend sendet GraphQL-Antworten mit den angeforderten Daten an das Frontend.
