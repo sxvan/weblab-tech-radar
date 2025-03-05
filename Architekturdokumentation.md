@@ -106,7 +106,7 @@ Es wird JWT (JSON Web Token) zur Authentifizierung verwendet. Der Benutzer sende
 
 3. **Frontend: Angular mit Apollo Angular**: Angular für strukturierte SPAs, Apollo Angular für nahtlose GraphQL-Integration im Frontend.
 
-4. **GraphQL als Schnittstelle**: Flexible und präzise Datenabfragen, reduzierte Datenlast und verbesserte Performance.
+4. **GraphQL als Schnittstelle**: Flexible und präzise Datenabfragen, reduzierte Datenlast und verbesserte Performance. Hauptsächlich aufgrund des Lerneffekts gewählt um etwas neues zu lernen.
 
 5. **JWT für Authentifizierung**: Sichere, effiziente Authentifizierung mit JWT, einfaches Handling von Benutzerberechtigungen.
 
