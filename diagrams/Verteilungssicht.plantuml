@@ -1,0 +1,13 @@
+@startuml Verteilungssicht
+
+RECTANGLE Host {
+  RECTANGLE Frontend
+
+  RECTANGLE Backend
+
+  RECTANGLE Docker {
+    RECTANGLE Database
+  }
+}
+
+@enduml

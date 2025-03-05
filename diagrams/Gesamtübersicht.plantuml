@@ -1,0 +1,24 @@
+@startuml Gesamtübersicht
+!define RECTANGLE class
+
+RECTANGLE Backend {
+  ApolloServer
+  Prisma
+  Postgres
+}
+
+RECTANGLE Frontend {
+  Angular
+  ApolloAngular
+}
+
+RECTANGLE Database {
+  Postgres
+}
+
+Backend --> Frontend : GraphQL Response
+Frontend --> Backend : GraphQL Request
+Backend --> Database : Prisma ORM
+Database --> "Docker Container" : Läuft in
+
+@enduml

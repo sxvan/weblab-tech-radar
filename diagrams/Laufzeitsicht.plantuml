@@ -1,0 +1,18 @@
+@startuml Laufzeitsicht
+actor User
+
+entity Frontend
+entity Backend
+entity Prisma
+entity Postgres
+
+User -> Frontend : Füllt das Formular aus
+Frontend -> Backend : Sendet GraphQL-Anfrage (createTechnology)
+Backend -> Prisma : Ruft Prisma zur Speicherung der Technologie auf
+Prisma -> Postgres : Speichert die Technologie
+Postgres -> Prisma : Bestätigung der Speicherung
+Prisma -> Backend : Bestätigung an Backend
+Backend -> Frontend : Antwort mit neuer Technologie
+Frontend -> User : Zeigt die erstellte Technologie an
+
+@enduml

@@ -1,0 +1,47 @@
+@startuml Domänenmodell
+enum Role {
+  CTO
+  TECH_LEAD
+  EMPLOYEE
+}
+
+enum Category {
+  TECHNIQUES
+  PLATFORMS
+  TOOLS
+  LANGUAGES_AND_FRAMEWORKS
+}
+
+enum Classification {
+  ASSESS
+  TRIAL
+  ADOPT
+  HOLD
+}
+
+class User {
+  +String id
+  +String name
+  +String email
+  +String passwordHash
+  +Role role
+}
+
+class Technology {
+  +String id
+  +String name
+  +String description
+  +Category category
+  +Classification? classification
+  +String? classificationDescription
+  +DateTime createdAt
+  +DateTime? publishedAt
+  +DateTime? changedAt
+}
+
+User "1" -- "0..*" Technology : "erstellt"
+User "0..*" -- "1" Role : "ist"
+Technology "0..*" -- "1" Category : "gehört zu"
+Technology "0..*" -- "0..1" Classification : "eingestuft als"
+
+@enduml
