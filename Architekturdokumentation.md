@@ -77,6 +77,24 @@ Das System wird in drei Hauptkomponenten unterteilt (Frontend, Backend und Daten
 
 ![image](https://github.com/user-attachments/assets/24fc2566-9c5a-4010-91d7-db7e777f6cab)
 
+## Querschnittliche Konzepte
+
+### Domänenmodell
+
+Das Domänenmodell repräsentiert die grundlegenden Entitäten und deren Beziehungen in der Applikation:
+
+![image](https://github.com/user-attachments/assets/a755eedb-40f0-48fb-8374-3ec41e1650f1)
+
+- **User**: Ein Benutzer im System, der eine eindeutige `id`, `name`, `email` und ein `passwordHash` besitzt. Jeder Benutzer hat eine Rolle, die durch das `Role`-Enum definiert ist (CTO, TECH_LEAD, EMPLOYEE).
+  
+- **Technology**: Eine Technologie, die von einem Benutzer erstellt wird. Sie besitzt Attribute wie `id`, `name`, `description`, und gehört zu einer bestimmten `Category` (z.B. TECHNIQUES, PLATFORMS). Eine Technologie kann optional einer `Classification` zugewiesen werden (z.B. ASSESS, TRIAL).
+
+- Ein **User** kann mehrere **Technologies** erstellen.
+- Ein **User** hat genau eine **Role**.
+- Eine **Technology** gehört zu einer **Category**.
+- Eine **Technology** kann optional einer **Classification** zugewiesen werden.
+
+
 
 
 
